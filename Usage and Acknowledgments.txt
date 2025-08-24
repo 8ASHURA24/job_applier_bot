@@ -1,4 +1,60 @@
-🧪 Usage
+## 🧩 Folder Structure
+
+job_applier_bot/
+├── main.py                  # Entry point and orchestrator
+│
+├── gui/                     # Tkinter GUI components
+│   ├── interface.py         # Main GUI window and layout
+│   └── widgets.py           # Custom input fields, buttons, etc.
+│
+├── cli/                     # CLI argument parser
+│   └── parser.py            # argparse-based flag handling
+│
+├── scraper/                 # Site-specific scraping logic
+│   ├── naukri.py            # Naukri-specific scraper
+│   ├── linkedin.py          # LinkedIn-specific scraper
+│   ├── indeed.py            # (Optional) Indeed scraper
+│   └── utils.py             # Shared scraping utilities
+│
+├── applier/                 # Form filling and submission logic
+│   ├── login.py             # Secure login and session management
+│   ├── submit.py            # Form submission engine
+│   └── selectors.py         # Dynamic XPath/CSS selectors
+│
+├── ai/                      # AI-driven Q&A and cover letter generation
+│   ├── responder.py         # Generates answers to job questions
+│   └── templates/           # Cover letter and resume templates
+│       └── default.md
+│
+├── utils/                   # Logging, notifications, error handling
+│   ├── logger.py            # Log setup and rotation
+│   ├── notifier.py          # System tray and desktop notifications
+│   └── diagnostics.py       # Screenshot capture and error tracebacks
+│
+├── config/                  # Credentials, settings, selectors
+│   ├── credentials.env      # Encrypted login credentials
+│   ├── settings.yaml        # User preferences and flags
+│   └── selectors.json       # Site-specific field mappings
+│
+├── scheduler/               # Job timing and execution
+│   ├── runner.py            # Immediate and periodic execution
+│   └── cron.py              # Cron-style scheduling logic
+│
+├── dashboard/               # Analytics and job tracking
+│   ├── tracker.py           # Submission history and metrics
+│   └── report.html          # Visual dashboard output
+│
+├── assets/                  # Icons, screenshots, logs
+│   ├── tray_icon.ico        # System tray icon
+│   ├── error_screenshots/   # Screenshots on failure
+│   └── logs/                # Timestamped logs
+│
+└── requirements.txt         # Python dependencies
+
+---
+
+## 🧪 Usage
+
 GUI Mode
 python main.py --gui
 
@@ -6,11 +62,10 @@ python main.py --gui
 CLI Mode
 python main.py --role "Software Engineer" --location "Bangalore" --platform "Naukri"
 
-
 Scheduler
 python scheduler/runner.py
 
-
+---
 
 🔐 Security
 - Credentials are encrypted and stored securely.
@@ -38,5 +93,3 @@ MIT License. See LICENSE file for details.
 Built by ASHURA with a focus on scalable systems, automation, and mentorship. Inspired by real-world engineering workflows and the pursuit of production-grade excellence.
 
 ---
-
-
