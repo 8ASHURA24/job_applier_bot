@@ -1,0 +1,42 @@
+🧪 Usage
+GUI Mode
+python main.py --gui
+
+
+CLI Mode
+python main.py --role "Software Engineer" --location "Bangalore" --platform "Naukri"
+
+
+Scheduler
+python scheduler/runner.py
+
+
+
+🔐 Security
+- Credentials are encrypted and stored securely.
+- Diagnostic screenshots are saved only on failure.
+- Logs are timestamped and rotated for auditability.
+
+🧠 AI Integration
+Uses OpenAI or local LLMs to:
+- Answer dynamic application questions
+- Generate tailored cover letters
+- Summarize job descriptions for relevance scoring
+
+📈 Observability
+- Logs stored in assets/logs/
+- Screenshots in assets/error_screenshots/
+- Dashboard available at dashboard/report.html
+
+🛠️ Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you’d like to change.
+
+📄 License
+MIT License. See LICENSE file for details.
+
+🙌 Acknowledgments
+Built by ASHURA with a focus on scalable systems, automation, and mentorship. Inspired by real-world engineering workflows and the pursuit of production-grade excellence.
+
+---
+
+
